@@ -271,7 +271,7 @@ AOS.init();
      * Initiate portfolio details lightbox 
      */
     const portfolioDetailsLightbox = GLightbox({
-      selector: '.portfolio-details-lightbox',
+      selector: '.portfolio-detailss-lightbox',
       width: '90%',
       height: '90vh'
     });
