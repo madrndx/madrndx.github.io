@@ -24,6 +24,7 @@ body {
     body::before {
       background-attachment: fixed;
     }
+
   }
   
   a {
@@ -71,6 +72,179 @@ body {
   .interests.container {
     padding: 20px;
   }
+
+  @media (min-width: 992px){
+    .portfolio .portfolio-wrap .portfolio-info::before {
+      display: block;
+      content: "";
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      top: 35px;
+      left: 35px;
+      border-top: 3px solid #fff;
+      border-left: 3px solid #fff;
+      transition: all 0.5s ease 0s;
+      z-index: 9994;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info::after {
+      display: block;
+      content: "";
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      bottom: 35px;
+      right: 35px;
+      border-bottom: 3px solid #fff;
+      border-right: 3px solid #fff;
+      transition: all 0.5s ease 0s;
+      z-index: 9994;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info h4 {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info p {
+      color: #ffffff;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+    }
+        
+    .portfolio .portfolio-wrap .portfolio-links {
+      text-align: center;
+      z-index: 4;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-links a {
+      color: #fff;
+      margin: 0 2px;
+      font-size: 28px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+  }
+
+  @media (min-width: 480px) and (max-width: 991px){
+    .portfolio .portfolio-wrap .portfolio-info::before {
+      display: block;
+      content: "";
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      top: 35px;
+      left: 35px;
+      border-top: 3px solid #fff;
+      border-left: 3px solid #fff;
+      transition: all 0.5s ease 0s;
+      z-index: 9994;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info::after {
+      display: block;
+      content: "";
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      bottom: 35px;
+      right: 35px;
+      border-bottom: 3px solid #fff;
+      border-right: 3px solid #fff;
+      transition: all 0.5s ease 0s;
+      z-index: 9994;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info h4 {
+      font-size: 15px;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info p {
+      color: #ffffff;
+      font-size: 10px;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links {
+      text-align: center;
+      z-index: 4;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-links a {
+      color: #fff;
+      margin: 0 2px;
+      font-size: 20px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .portfolio .portfolio-wrap .portfolio-info::before {
+      display: block;
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 35px;
+      left: 35px;
+      border-top: 3px solid #fff;
+      border-left: 3px solid #fff;
+      transition: all 0.5s ease 0s;
+      z-index: 9994;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info::after {
+      display: block;
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      bottom: 35px;
+      right: 35px;
+      border-bottom: 3px solid #fff;
+      border-right: 3px solid #fff;
+      transition: all 0.5s ease 0s;
+      z-index: 9994;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info h4 {
+      font-size: 12px;
+      color: #fff;
+      font-weight: 600;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-info p {
+      color: #ffffff;
+      font-size: 8px;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links {
+      text-align: center;
+      z-index: 4;
+    }
+    
+    .portfolio .portfolio-wrap .portfolio-links a {
+      color: #fff;
+      margin: 0 2px;
+      font-size: 15px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+  }
   
   @media (max-width: 768px) {
     #header h2 {
@@ -83,6 +257,13 @@ body {
   
     section.section-show {
       top: 80px;
+    }
+    #header.header-top {
+      height: 60px;
+    }
+  
+    #header.header-top h1 {
+      font-size: 26px;
     }
   }
   
@@ -321,16 +502,6 @@ body {
     margin: 0;
   }
   
-  @media (max-width: 768px) {
-    #header.header-top {
-      height: 60px;
-    }
-  
-    #header.header-top h1 {
-      font-size: 26px;
-    }
-  }
-
 /* Nav */
 /* * Desktop Navigation */
 .navbar {
@@ -685,61 +856,8 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   
-  .portfolio .portfolio-wrap .portfolio-info::before {
-    display: block;
-    content: "";
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    top: 35px;
-    left: 35px;
-    border-top: 3px solid #fff;
-    border-left: 3px solid #fff;
-    transition: all 0.5s ease 0s;
-    z-index: 9994;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-info::after {
-    display: block;
-    content: "";
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    bottom: 35px;
-    right: 35px;
-    border-bottom: 3px solid #fff;
-    border-right: 3px solid #fff;
-    transition: all 0.5s ease 0s;
-    z-index: 9994;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-info h4 {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-info p {
-    color: #ffffff;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links {
-    text-align: center;
-    z-index: 4;
-  }
-  
-  .portfolio .portfolio-wrap .portfolio-links a {
-    color: #fff;
-    margin: 0 2px;
-    font-size: 28px;
-    display: inline-block;
-    transition: 0.3s;
-  }
   
   .portfolio .portfolio-wrap .portfolio-links a:hover {
     color: #969696;
