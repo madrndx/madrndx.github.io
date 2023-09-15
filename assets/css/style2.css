@@ -189,6 +189,11 @@ body {
   }
 
   @media (max-width: 424px) {
+
+    #header h1 a{
+      font-size: 28px;
+    }
+
     .portfolio .portfolio-wrap .portfolio-info::before {
       display: block;
       content: "";
@@ -247,6 +252,10 @@ body {
   }
   
   @media (max-width: 768px) {
+    #header h1 a{
+      font-size: 30px;
+    }
+
     #header h2 {
       text-align: center;
     }
@@ -473,6 +482,11 @@ body {
   #header .social-links a:hover {
     background: #969696;
   }
+
+  .bi-list::before {
+    content: "\f479";
+    margin-top: 14px !important;
+}
   
   @media (max-width: 992px) {
     #header h1 {
