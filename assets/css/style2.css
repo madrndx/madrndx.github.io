@@ -720,6 +720,7 @@ body {
 
   /* Interest */
   .interests .icon-box {
+    transform: rotateX(-5deg) rotateY(25deg);
     display: flex;
     align-items: center;
     padding: 0px;
@@ -727,6 +728,7 @@ body {
     transition: ease-in-out 0.3s;
   }
   .interests img {
+    
     width: 35px;
     height: 35px;
   }
