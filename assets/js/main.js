@@ -84,6 +84,7 @@ draggableElem.addEventListener(events[deviceType].move,(e) =>{
 
 draggableElem.addEventListener(events[deviceType].up,(stopMovement = (e) =>{
     moveElement = false;
+    draggableElem.style.position='';
 })); 
 
 draggableElem.addEventListener("mouseleave", stopMovement);
@@ -91,6 +92,7 @@ draggableElem.addEventListener("mouseleave", stopMovement);
 draggableElem.addEventListener(events[deviceType].up,(e) =>{
     
     moveElement = false;
+    draggableElem.style.position='';
     
 });
 
