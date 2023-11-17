@@ -19,11 +19,7 @@ body {
     z-index: -1;
     
   }
-  .move{
-    width: 500px;
-    height: auto;
-    cursor: move;
-  }
+
   
   @media (min-width: 1024px) {
     body::before {
