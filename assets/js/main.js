@@ -10,93 +10,6 @@
 
 
 
-let draggableElem=document.getElementById('draggable-elem');
-let initialX=0,
-    initialY=0;
-let moveElement=false;
-
-
-//Event Object
-let events={
-    mouse:{
-        down:"mousedown",
-        move:"mousemove",
-        up:"moseup"
-    },
-    touch:{
-        down:"touchstart",
-        move:"touchmove",
-        up:"touchend"
-    }
-};
-
-let deviceType="";
-
-
-//Detech Touch Device
-
-const isTouchDevice= ()=>{
-    try{
-        document.createEvent("TouchEvent");
-        deviceType="touch";
-        return true;
-    }
-    catch(e){
-        deviceType="mouse";
-        return false;
-    }
-}
-
-isTouchDevice();
-console.log(isTouchDevice());
-
-
-// Start Draggable
-
-draggableElem.addEventListener(events[deviceType].down,(e) =>{
-    e.preventDefault();
-
-    // initial x dan y points
-    initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-    initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-    
-
-    //start movement
-    moveElement = true;
-
-});
-
-//move
-draggableElem.addEventListener(events[deviceType].move,(e) =>{
-    
-    if(moveElement){
-        e.preventDefault();
-        let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
-        let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
-        draggableElem.style.top=draggableElem.offsetTop - (initialY - newY) + "px";
-        draggableElem.style.left=draggableElem.offsetLeft - (initialX - newX) + "px";
-        draggableElem.style.position='absolute';
-        draggableElem.style.width='300px';
-        initialX = newX;
-        initialY = newY;
-    }
-});
-
-draggableElem.addEventListener(events[deviceType].up,(stopMovement = (e) =>{
-    moveElement = false;
-    draggableElem.style.position='';
-    draggableElem.style.width='';
-})); 
-
-draggableElem.addEventListener("mouseleave", stopMovement);
-
-draggableElem.addEventListener(events[deviceType].up,(e) =>{
-    
-    moveElement = false;
-    draggableElem.style.position='';
-    draggableElem.style.width='';
-    
-});
 
 
 
@@ -384,3 +297,91 @@ draggableElem.addEventListener(events[deviceType].up,(e) =>{
   AOS.init();
 
 })()
+
+let draggableElem=document.getElementById('draggable-elem');
+let initialX=0,
+    initialY=0;
+let moveElement=false;
+
+
+//Event Object
+let events={
+    mouse:{
+        down:"mousedown",
+        move:"mousemove",
+        up:"moseup"
+    },
+    touch:{
+        down:"touchstart",
+        move:"touchmove",
+        up:"touchend"
+    }
+};
+
+let deviceType="";
+
+
+//Detech Touch Device
+
+const isTouchDevice= ()=>{
+    try{
+        document.createEvent("TouchEvent");
+        deviceType="touch";
+        return true;
+    }
+    catch(e){
+        deviceType="mouse";
+        return false;
+    }
+}
+
+isTouchDevice();
+console.log(isTouchDevice());
+
+
+// Start Draggable
+
+draggableElem.addEventListener(events[deviceType].down,(e) =>{
+    e.preventDefault();
+
+    // initial x dan y points
+    initialX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
+    initialY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+    
+
+    //start movement
+    moveElement = true;
+
+});
+
+//move
+draggableElem.addEventListener(events[deviceType].move,(e) =>{
+    
+    if(moveElement){
+        e.preventDefault();
+        let newX = !isTouchDevice() ? e.clientX : e.touches[0].clientX;
+        let newY = !isTouchDevice() ? e.clientY : e.touches[0].clientY;
+        draggableElem.style.top=draggableElem.offsetTop - (initialY - newY) + "px";
+        draggableElem.style.left=draggableElem.offsetLeft - (initialX - newX) + "px";
+        draggableElem.style.position='absolute';
+        draggableElem.style.width='300px';
+        initialX = newX;
+        initialY = newY;
+    }
+});
+
+draggableElem.addEventListener(events[deviceType].up,(stopMovement = (e) =>{
+    moveElement = false;
+    draggableElem.style.position='';
+    draggableElem.style.width='';
+})); 
+
+draggableElem.addEventListener("mouseleave", stopMovement);
+
+draggableElem.addEventListener(events[deviceType].up,(e) =>{
+    
+    moveElement = false;
+    draggableElem.style.position='';
+    draggableElem.style.width='';
+    
+});
